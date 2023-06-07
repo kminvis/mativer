@@ -125,16 +125,6 @@
             <div style="border-bottom: 2px solid #ddd; margin-bottom: 40px;">
                 <h2 style="font-weight: normal;" class="fadein_animation">'다들 내 살냄샌 줄 알아요~' 마티베르 실제 사용자 후기</h2>
             </div>
-            <p style="color: gray; text-align: center;">23.06.01 스마트스토어 기준</p>
-            <div id="chartContainer">
-                <canvas id="donutChart"></canvas>
-                <div id="chart-text">
-                    <p class="fadein_animation" style="font-size: 20px;">아주 만족해요 77.8%</p>
-                    <p class="fadein_animation">괜찮아요 22.2%</p>
-                    <p class="fadein_animation" style="color: crimson; font-weight: bold;">별로에요 0%</p>
-                </div>
-            </div>
-
             <img src="review.png" width="100%">
             <div style="overflow: hidden;">
                 <iframe
@@ -351,40 +341,7 @@
         });
 
     </script>
-    <script>
-        var donutData = {
-            labels: ['아주 만족해요', '괜찮아요', '별로에요'],
-            datasets: [{
-                data: [21, 6, 0],
-                backgroundColor: ['darksalmon', 'antiquewhite', '#646464'],
-                hoverBackgroundColor: ['chocolate', 'bisque', '#434343']
-            }]
-        };
 
-        var donutOptions = {
-            responsive: true,
-            cutout: '70%', // 도넛의 내부 구멍 크기 설정
-            plugins: {
-                legend: {
-                    display: false,
-                    position: 'bottom'
-                }
-            },
-            animation: {
-                animateRotate: true, // 도넛 차트에 회전 애니메이션 적용
-                duration: 1000, // 애니메이션 지속 시간 (밀리초)
-                easing: 'easeInOutCirc' // 애니메이션 이징 설정
-            }
-        };
-
-        // Chart.js 도넛 차트 생성 코드
-        var donutCtx = document.getElementById('donutChart').getContext('2d');
-        var donutChart = new Chart(donutCtx, {
-            type: 'doughnut',
-            data: donutData,
-            options: donutOptions
-        });
-    </script>
 </body>
 
 </html>
